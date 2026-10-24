@@ -5,6 +5,13 @@ Landing page de uma página só, sem build e sem dependência de framework. Abre
 **Feijoada da Rê** · Rua Paulo de Frontin, 70 — Cajuru, Curitiba/PR · 82940-070
 Sábados, 11h às 14h · WhatsApp (41) 99138-6002 · Fone (41) 3532-4020
 
+
+## No ar
+
+**https://leonardobora.github.io/feijoada-da-re/**
+
+Repositório: https://github.com/leonardobora/feijoada-da-re (público, GitHub Pages na branch `main`).
+
 ## Estrutura
 
 ```
