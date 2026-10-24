@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feijoada da Rê — Feijoada no Cajuru, Curitiba | Sábado, 11h às 14h</title>
+<meta name="description" content="Feijoada completa por R$90, serve 2 pessoas com folga. Carnes, arroz, couve com bacon, farinha, laranja e vinagrete, com bisteca de brinde. Sábado, das 11h às 14h, no Cajuru. Pronta entrega e retirada. WhatsApp (41) 99138-6002.">
+<meta property="og:title" content="Feijoada da Rê — feijoada completa R$90, serve 2 pessoas">
+<meta property="og:description" content="Carnes, arroz, couve com bacon, farinha, laranja e vinagrete, com bisteca de brinde. Sábado, 11h às 14h. Rua Paulo de Frontin, 70 — Cajuru, Curitiba.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#FFD400">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --amarelo:#FFD400;
+    --preto:#121212;
+    --vermelho:#D32027;
+    --creme:#FFF8E1;
+    --texto:#1a1a1a;
+    --zap:#25D366;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:clip;max-width:100%}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    color:var(--texto);
+    background:var(--creme);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;height:auto;display:block}
+  h1,h2,h3,.display{font-family:'Anton','Arial Black',Impact,sans-serif;font-weight:400;letter-spacing:.4px;line-height:.96;text-transform:uppercase;margin:0}
+  a{color:inherit}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px;width:100%}
+
+  .topbar{background:var(--preto);color:var(--amarelo);text-align:center;padding:9px 14px;font-weight:800;font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
+  .topbar span{color:#fff;font-weight:600}
+
+  /* hero */
+  .hero{background:var(--amarelo);padding:34px 0 44px;position:relative}
+  .hero .wrap{text-align:center;position:relative;z-index:1}
+  .kicker{display:inline-block;background:var(--vermelho);color:#fff;font-weight:800;font-size:11px;letter-spacing:2px;padding:7px 13px;border-radius:999px;text-transform:uppercase}
+  h1{font-size:clamp(50px,15.5vw,112px);color:var(--preto);margin:26px 0 0}
+  h1 .da{display:block;font-size:.3em;letter-spacing:7px;color:var(--vermelho);margin:14px 0 10px;line-height:1}
+  h1 .nome{display:inline-block;background:var(--vermelho);color:var(--amarelo);padding:.02em .2em .08em;border-radius:16px;transform:rotate(-1.5deg)}
+  .sub{font-size:clamp(15px,4vw,18px);font-weight:600;max-width:540px;margin:24px auto 0;line-height:1.5}
+  .sub b{background:var(--preto);color:var(--amarelo);padding:2px 8px;border-radius:6px;white-space:nowrap}
+
+  .acoes{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:56px;padding:0 24px;border-radius:999px;font-weight:800;font-size:17px;text-decoration:none;border:3px solid var(--preto);transition:transform .12s ease;text-align:center}
+  .btn:active{transform:scale(.97)}
+  .btn svg{width:21px;height:21px;flex:none}
+  .btn-zap{background:var(--zap);color:#06331b;box-shadow:0 6px 0 var(--preto)}
+  .btn-ghost{background:transparent;color:var(--preto)}
+
+  /* faixa */
+  .faixa{background:var(--preto);color:#fff;padding:15px 0}
+  .faixa ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:center;font-size:13.5px;font-weight:600}
+  .faixa li{display:flex;align-items:center;gap:7px;white-space:nowrap}
+  .faixa b{color:var(--amarelo)}
+
+  section{padding:48px 0}
+  h2{font-size:clamp(28px,7.5vw,44px);color:var(--preto);margin-bottom:12px}
+  h2 em{font-style:normal;color:var(--vermelho)}
+  p{line-height:1.65;font-size:16.5px;margin:0 0 14px}
+  .lead{font-size:18px;max-width:620px}
+
+  /* cardapio */
+  .menu-card{background:#fff;border:3px solid var(--preto);border-radius:20px;padding:24px 20px;box-shadow:9px 9px 0 var(--amarelo);margin-top:26px}
+  .item{display:flex;gap:14px;align-items:baseline;padding:16px 0;border-bottom:2px dashed #e2ddc9}
+  .item:first-child{padding-top:0}
+  .item:last-child{border-bottom:0;padding-bottom:0}
+  .item .nome-item{flex:1;min-width:0}
+  .item .nome-item strong{display:block;font-size:17px;line-height:1.3}
+  .item .nome-item small{display:block;color:#5a5a5a;font-size:14px;line-height:1.45;margin-top:5px}
+  .item .nome-item small b{color:var(--preto)}
+  .item .preco{font-family:'Anton',sans-serif;font-size:26px;color:var(--vermelho);white-space:nowrap;line-height:1}
+  .item .preco em{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:11px;font-weight:700;color:#666;letter-spacing:.4px;text-align:right;margin-top:6px;text-transform:none}
+  .brinde{display:inline-flex;align-items:center;gap:6px;background:var(--amarelo);border:2px solid var(--preto);border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.6px;padding:5px 10px;margin-top:9px;text-transform:uppercase}
+  .adicionais{margin-top:22px;background:var(--creme);border:2px solid var(--preto);border-radius:14px;padding:16px}
+  .adicionais h4{margin:0 0 10px;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--vermelho)}
+  .adicionais ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+  .adicionais li{background:#fff;border:2px solid var(--preto);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:700;white-space:nowrap}
+  .adicionais li span{color:var(--vermelho)}
+
+  /* passos */
+  .passos{display:grid;gap:16px;grid-template-columns:1fr;margin-top:24px}
+  .passo{background:#fff;border:3px solid var(--preto);border-radius:18px;padding:20px 18px;box-shadow:7px 7px 0 var(--amarelo);display:flex;flex-direction:column}
+  .passo .n{font-family:'Anton',sans-serif;font-size:32px;color:var(--vermelho);line-height:1}
+  .passo h3{margin:6px 0 8px;font-size:18px;min-height:2.4em}
+  .passo p{margin:0;font-size:15.5px;color:#444}
+
+  /* onde */
+  .onde{background:var(--amarelo)}
+  .grid{display:grid;gap:22px;grid-template-columns:1fr}
+  .card{background:#fff;border:3px solid var(--preto);border-radius:18px;padding:22px 20px}
+  .card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 14px;font-size:15.5px}
+  .card dt{font-weight:800;color:var(--vermelho);text-transform:uppercase;font-size:11px;letter-spacing:1px;align-self:center}
+  .card dd{margin:0;font-weight:600;line-height:1.45}
+  .card dd a{color:var(--vermelho);white-space:nowrap}
+  .aberto{display:inline-flex;align-items:center;gap:8px;background:#e8fff0;border:2px solid var(--zap);color:#0a5c2c;font-weight:800;font-size:12px;padding:8px 13px;border-radius:999px;margin-bottom:18px;text-transform:uppercase;letter-spacing:.8px}
+  .ponto{width:9px;height:9px;border-radius:50%;background:var(--zap);flex:none}
+
+  /* cartaz */
+  .cartaz{background:var(--preto);padding:40px 0}
+  .cartaz .grid{grid-template-columns:1fr;align-items:center;gap:26px}
+  .cartaz img{border-radius:14px;border:4px solid var(--amarelo);width:100%}
+  .cartaz .txt{color:#eee}
+  .cartaz h2{color:var(--amarelo);margin-bottom:10px}
+  .cartaz p{color:#c9c9c9;font-size:16px;max-width:380px}
+
+  footer{background:var(--preto);border-top:2px solid #2a2a2a;color:#ddd;padding:30px 0 110px;font-size:14px}
+  footer a{color:var(--amarelo);text-decoration:none;font-weight:700}
+  footer .linha{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-bottom:12px;text-align:center}
+  footer .cred{text-align:center;color:#777;font-size:12px;line-height:1.6}
+
+  .fixa{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(18,18,18,.97);border-top:2px solid var(--amarelo)}
+  .fixa .btn{flex:1;min-height:52px;font-size:16px;box-shadow:none;border-width:0;padding:0 14px}
+  .fixa .btn-ghost{background:#fff;color:var(--preto)}
+
+  @media(min-width:820px){
+    .fixa{display:none}
+    footer{padding-bottom:30px}
+    .passos{grid-template-columns:repeat(3,1fr)}
+    .grid{grid-template-columns:1.15fr .85fr;align-items:start}
+    .cartaz .grid{grid-template-columns:.8fr 1fr;gap:40px}
+    .menu-card{padding:30px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Só no sábado <span>· 11h às 14h</span> · Cajuru, Curitiba</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Pronta entrega e retirada</span>
+    <h1>Feijoada<span class="da">da</span><span class="nome">Rê</span></h1>
+    <p class="sub">Feijoada completa por <b>R$ 90</b>, que serve 2 pessoas com folga. Feita no sábado, no Cajuru, das 11h às 14h.</p>
+    <div class="acoes">
+      <a class="btn btn-zap" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20pedir%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1l2 1c.2.1.4.2.5.3.1.2.1.7-.1 1.4Z"/></svg>
+        Pedir no WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#cardapio">Ver o cardápio</a>
+    </div>
+  </div>
+</header>
+
+<div class="faixa">
+  <div class="wrap">
+    <ul>
+      <li><b>Sábado</b> 11h às 14h</li>
+      <li><b>Entrega</b> na região</li>
+      <li><b>Serve 2</b> pessoas com folga</li>
+      <li><b>Retirada</b> no local</li>
+      <li><b>Fone</b> (41) 3532-4020</li>
+    </ul>
+  </div>
+</div>
+
+<section id="cardapio">
+  <div class="wrap">
+    <h2>Cardápio e <em>preços</em></h2>
+    <p class="lead">Feijoada de panela, com as carnes separadas e os acompanhamentos da casa. Tudo por porção, para levar ou receber em casa.</p>
+
+    <div class="menu-card">
+      <div class="item">
+        <div class="nome-item">
+          <strong>Feijoada completa</strong>
+          <small><b>Serve 2 pessoas com folga.</b> Carnes, arroz, couve com bacon, farinha, laranja e vinagrete.</small>
+          <span class="brinde">🍖 Bisteca de porco frita de brinde</span>
+        </div>
+        <div class="preco">R$ 90<em>para 2</em></div>
+      </div>
+
+      <div class="item">
+        <div class="nome-item">
+          <strong>Só a feijoada</strong>
+          <small>Sem acompanhamentos, para quem já tem o arroz em casa.</small>
+        </div>
+        <div class="preco">R$ 65</div>
+      </div>
+
+      <div class="adicionais">
+        <h4>Porções avulsas</h4>
+        <ul>
+          <li>Arroz <span>R$ 10</span></li>
+          <li>Couve <span>R$ 10</span></li>
+          <li>Bisteca <span>R$ 7</span></li>
+          <li>Vinagrete <span>R$ 6</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" style="padding-top:0">
+  <div class="wrap">
+    <h2>Como <em>pedir</em></h2>
+    <p class="lead">Sem aplicativo e sem taxa de plataforma: é no WhatsApp, direto com a gente.</p>
+    <div class="passos">
+      <div class="passo">
+        <div class="n">1</div>
+        <h3>Chama no WhatsApp</h3>
+        <p>Manda mensagem no (41) 99138-6002 até a sexta ou no sábado de manhã, dizendo quantas porções você quer.</p>
+      </div>
+      <div class="passo">
+        <div class="n">2</div>
+        <h3>Entrega ou retirada</h3>
+        <p>Entregamos na região do Cajuru. Se preferir, é só buscar na Paulo de Frontin, 70.</p>
+      </div>
+      <div class="passo">
+        <div class="n">3</div>
+        <h3>Sábado, 11h às 14h</h3>
+        <p>É o único dia. Depois das 14h a gente fecha a panela — não tem segunda-feira.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="wrap">
+    <h2>Onde <em>fica</em></h2>
+    <div class="grid">
+      <div class="card">
+        <span class="aberto"><span class="ponto"></span> Aberto no sábado, 11h às 14h</span>
+        <dl>
+          <dt>Endereço</dt><dd>Rua Paulo de Frontin, 70<br>Cajuru · Curitiba/PR · 82940-070</dd>
+          <dt>Horário</dt><dd>Sábado, 11h às 14h<br><small style="color:#666;font-weight:500">Fechado nos outros dias</small></dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/5541991386002">(41) 99138-6002</a></dd>
+          <dt>Telefone</dt><dd><a href="tel:+554135324020">(41) 3532-4020</a></dd>
+        </dl>
+        <p style="margin:20px 0 0"><a class="btn btn-zap" style="width:100%" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20pedir%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener">Pedir agora no WhatsApp</a></p>
+      </div>
+      <div class="card">
+        <h3 style="font-family:'Anton',sans-serif;font-size:24px;margin:0 0 10px">Pronta entrega</h3>
+        <p style="font-size:15.5px;margin:0 0 12px">Feijoada para levar e entrega na região do Cajuru. Para entrega, combine o endereço no WhatsApp antes do sábado.</p>
+        <p style="font-size:15.5px;margin:0">A porção completa serve 2 pessoas com folga. Para grupo maior, peça mais de uma ou combine no WhatsApp.</p>
+        <p style="margin:18px 0 0"><a class="btn btn-ghost" style="width:100%;border-color:var(--preto)" href="https://www.google.com/maps/search/?api=1&query=Feijoada+da+Re,+R.+Paulo+de+Frontin,+70,+Cajuru,+Curitiba" target="_blank" rel="noopener">Abrir no mapa</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cartaz">
+  <div class="wrap">
+    <div class="grid">
+      <img src="assets/cartaz.jpg" alt="Cartaz da Feijoada da Rê, com os telefones 3532-4020 e 99138-6002 e o endereço Paulo de Frontin, 70 - Cajuru">
+      <div class="txt">
+        <h2>É só no sábado</h2>
+        <p>Faça a sua encomenda durante a semana e garanta a porção. No sábado a gente abre às 11h e fecha às 14h.</p>
+        <p style="margin-top:18px"><a class="btn btn-zap" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20encomendar%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="linha">
+      <a href="https://wa.me/5541991386002">WhatsApp (41) 99138-6002</a>
+      <a href="tel:+554135324020">Fone (41) 3532-4020</a>
+      <a href="#onde">Paulo de Frontin, 70 — Cajuru</a>
+    </div>
+    <div class="cred">Feijoada da Rê · Curitiba/PR<br>Sábados, das 11h às 14h · Pronta entrega e retirada</div>
+  </div>
+</footer>
+
+<div class="fixa">
+  <a class="btn btn-zap" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20pedir%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-ghost" href="tel:+554135324020">Ligar</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Feijoada da Rê",
+  "description": "Feijoada completa feita aos sábados, servindo 2 pessoas com folga, com pronta entrega e retirada no bairro Cajuru, em Curitiba.",
+  "servesCuisine": ["Brasileira", "Feijoada"],
+  "priceRange": "R$ 6–90",
+  "telephone": "+5541991386002",
+  "url": "https://leonardobora.github.io/feijoada-da-re/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Paulo de Frontin, 70",
+    "addressLocality": "Curitiba",
+    "addressRegion": "PR",
+    "postalCode": "82940-070",
+    "addressCountry": "BR"
+  },
+  "areaServed": {"@type": "Place", "name": "Cajuru, Curitiba"},
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "11:00",
+    "closes": "14:00"
+  }],
+  "hasMenu": {
+    "@type": "Menu",
+    "hasMenuSection": [{
+      "@type": "MenuSection",
+      "name": "Feijoada",
+      "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Feijoada completa (serve 2 pessoas com folga)", "description": "Carnes, arroz, couve com bacon, farinha, laranja e vinagrete, com bisteca de porco frita de brinde.", "offers": {"@type": "Offer", "price": "90.00", "priceCurrency": "BRL"}},
+        {"@type": "MenuItem", "name": "Só a feijoada, sem acompanhamentos", "offers": {"@type": "Offer", "price": "65.00", "priceCurrency": "BRL"}},
+        {"@type": "MenuItem", "name": "Arroz", "offers": {"@type": "Offer", "price": "10.00", "priceCurrency": "BRL"}},
+        {"@type": "MenuItem", "name": "Couve", "offers": {"@type": "Offer", "price": "10.00", "priceCurrency": "BRL"}},
+        {"@type": "MenuItem", "name": "Bisteca", "offers": {"@type": "Offer", "price": "7.00", "priceCurrency": "BRL"}},
+        {"@type": "MenuItem", "name": "Vinagrete", "offers": {"@type": "Offer", "price": "6.00", "priceCurrency": "BRL"}}
+      ]
+    }]
+  }
+}
+</script>
+</body>
+</html>
