@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Feijoada da Rê — Feijoada no Cajuru, Curitiba | Sábado, 11h às 14h</title>
-<meta name="description" content="Feijoada completa por R$90, serve 2 pessoas com folga. Carnes, arroz, couve com bacon, farinha, laranja e vinagrete, com bisteca de brinde. Sábado, das 11h às 14h, no Cajuru. Retirada no local e entrega por Uber Flash. WhatsApp (41) 99138-6002.">
-<meta property="og:title" content="Feijoada da Rê — feijoada completa R$90, serve 2 pessoas">
-<meta property="og:description" content="Carnes, arroz, couve com bacon, farinha, laranja e vinagrete, com bisteca de brinde. Sábado, 11h às 14h. Rua Paulo de Frontin, 70 — Cajuru, Curitiba.">
+<title>Feijoada da Rê | Feijoada de panela no Cajuru, Curitiba, sábado das 11h às 14h</title>
+<meta name="description" content="Feijoada de panela no Cajuru, em Curitiba, só no sábado, das 11h às 14h. R$ 90 serve 2 pessoas com folga, com bisteca de brinde. Retirada no local ou entrega por Uber Flash. WhatsApp (41) 99138-6002.">
+<meta property="og:title" content="Feijoada da Rê: feijoada de panela R$ 90, serve 2 pessoas">
+<meta property="og:description" content="Feijoada de panela, só no sábado. Serve 2 pessoas com folga e vem com bisteca de brinde. Rua Paulo de Frontin, 70, Cajuru, Curitiba.">
 <meta property="og:type" content="restaurant">
 <meta property="og:locale" content="pt_BR">
 <meta name="theme-color" content="#FFD400">
@@ -71,7 +71,9 @@
 
   /* cardapio */
   .menu-card{background:#fff;border:3px solid var(--preto);border-radius:20px;padding:24px 20px;box-shadow:9px 9px 0 var(--amarelo);margin-top:26px}
-  .item{display:flex;gap:14px;align-items:baseline;padding:16px 0;border-bottom:2px dashed #e2ddc9}
+  .item{display:flex;gap:14px;align-items:center;padding:16px 0;border-bottom:2px dashed #e2ddc9}
+  .item .thumb{width:56px;height:56px;flex:none;border:3px solid var(--preto);border-radius:14px;margin:0}
+  .item .thumb figcaption{font-size:9px;padding:4px;letter-spacing:.6px}
   .item:first-child{padding-top:0}
   .item:last-child{border-bottom:0;padding-bottom:0}
   .item .nome-item{flex:1;min-width:0}
@@ -84,7 +86,8 @@
   .adicionais{margin-top:22px;background:var(--creme);border:2px solid var(--preto);border-radius:14px;padding:16px}
   .adicionais h4{margin:0 0 10px;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--vermelho)}
   .adicionais ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-  .adicionais li{background:#fff;border:2px solid var(--preto);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:700;white-space:nowrap}
+  .adicionais li{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--preto);border-radius:999px;padding:6px 13px 6px 7px;font-size:14px;font-weight:700;white-space:nowrap}
+  .adicionais li .minifoto{width:28px;height:28px;flex:none;border:2px solid var(--preto);border-radius:9px}
   .adicionais li span{color:var(--vermelho)}
 
   /* passos */
@@ -126,6 +129,26 @@
   .fixa .btn{flex:1;min-height:52px;font-size:16px;box-shadow:none;border-width:0;padding:0 14px}
   .fixa .btn-ghost{background:#fff;color:var(--preto)}
 
+  /* fotos: a caixa listrada aparece sozinha enquanto a foto nao existir */
+  .foto{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:repeating-linear-gradient(45deg,#efe4c6 0 12px,#e3d6b0 12px 24px)}
+  .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+  .foto figcaption{position:relative;z-index:1;font-family:'Anton',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8b7a4b;text-align:center;padding:8px;line-height:1.2}
+
+  /* carrossel do hero */
+  .carrosel{margin-top:30px}
+  .trilho{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+  .trilho::-webkit-scrollbar{display:none}
+  .slide{flex:0 0 84%;scroll-snap-align:center;aspect-ratio:4/3;margin:0;border:3px solid var(--preto);border-radius:16px;box-shadow:6px 6px 0 var(--preto)}
+  .controles{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
+  .seta{width:44px;height:44px;border-radius:50%;border:3px solid var(--preto);background:#fff;color:var(--preto);font-size:22px;font-weight:800;line-height:1;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .pontos{display:flex;gap:8px}
+  .ponto-b{width:11px;height:11px;border-radius:50%;border:2px solid var(--preto);background:transparent;padding:0;cursor:pointer}
+  .ponto-b.ativo{background:var(--preto)}
+
+  /* galeria */
+  .galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+  .galeria .foto{aspect-ratio:1/1;border:3px solid var(--preto);border-radius:14px;margin:0}
+
   @media(min-width:820px){
     .fixa{display:none}
     footer{padding-bottom:30px}
@@ -134,6 +157,9 @@
     .cartaz .grid{grid-template-columns:.8fr 1fr;gap:40px}
     .menu-card{padding:30px}
     .mapa iframe{height:380px}
+    .slide{flex:0 0 46%}
+    .item .thumb{width:76px;height:76px}
+    .galeria{grid-template-columns:repeat(3,1fr);gap:16px}
   }
 </style>
 </head>
@@ -143,15 +169,30 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="kicker">Pronta entrega e retirada</span>
+    <span class="kicker">Retirada no local ou Uber Flash</span>
     <h1>Feijoada<span class="da">da</span><span class="nome">Rê</span></h1>
-    <p class="sub">Feijoada completa por <b>R$ 90</b>, que serve 2 pessoas com folga. Feita no sábado, no Cajuru, das 11h às 14h.</p>
+    <p class="sub">Feijoada de panela que sai do fogo todo sábado, das 11h às 14h, no Cajuru. A porção de <b>R$ 90</b> serve 2 pessoas com folga.</p>
     <div class="acoes">
       <a class="btn btn-zap" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20pedir%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1l2 1c.2.1.4.2.5.3.1.2.1.7-.1 1.4Z"/></svg>
         Pedir no WhatsApp
       </a>
       <a class="btn btn-ghost" href="#cardapio">Ver o cardápio</a>
+    </div>
+
+    <div class="carrosel">
+      <div class="trilho">
+        <figure class="slide foto"><img src="assets/fotos/panela-aberta.jpg" alt="Panela de feijoada aberta, com as carnes à mostra" onerror="this.remove()"><figcaption>Panela aberta</figcaption></figure>
+        <figure class="slide foto"><img src="assets/fotos/prato-montado.jpg" alt="Prato de feijoada montado, com arroz, couve e laranja" onerror="this.remove()"><figcaption>Prato montado</figcaption></figure>
+        <figure class="slide foto"><img src="assets/fotos/bisteca.jpg" alt="Bisteca de porco frita, o brinde da casa" onerror="this.remove()"><figcaption>A bisteca de brinde</figcaption></figure>
+        <figure class="slide foto"><img src="assets/fotos/couve.jpg" alt="Couve com bacon" onerror="this.remove()"><figcaption>Couve com bacon</figcaption></figure>
+        <figure class="slide foto"><img src="assets/fotos/retirada.jpg" alt="Retirada da feijoada no balcão" onerror="this.remove()"><figcaption>Retirada no balcão</figcaption></figure>
+      </div>
+      <div class="controles">
+        <button type="button" class="seta" aria-label="Foto anterior">‹</button>
+        <div class="pontos"></div>
+        <button type="button" class="seta" aria-label="Próxima foto">›</button>
+      </div>
     </div>
   </div>
 </header>
@@ -171,22 +212,24 @@
 <section id="cardapio">
   <div class="wrap">
     <h2>Cardápio e <em>preços</em></h2>
-    <p class="lead">Feijoada de panela, com as carnes separadas e os acompanhamentos da casa. Tudo por porção, para levar ou receber em casa.</p>
+    <p class="lead">A panela começa cedo no sábado. Vem tudo separado, do jeito que a gente manda: as carnes, o arroz, a couve. Por porção, para buscar aqui ou receber em casa.</p>
 
     <div class="menu-card">
       <div class="item">
+        <figure class="thumb foto"><img src="assets/fotos/feijoada-completa.jpg" alt="Feijoada completa com os acompanhamentos" onerror="this.remove()"><figcaption>Prato</figcaption></figure>
         <div class="nome-item">
           <strong>Feijoada completa</strong>
-          <small><b>Serve 2 pessoas com folga.</b> Carnes, arroz, couve com bacon, farinha, laranja e vinagrete.</small>
-          <span class="brinde">🍖 Bisteca de porco frita de brinde</span>
+          <small><b>Serve 2 pessoas com folga.</b> Vem com as carnes, arroz, couve com bacon, farinha, laranja e vinagrete.</small>
+          <span class="brinde">Bisteca de porco frita de brinde</span>
         </div>
         <div class="preco">R$ 90<em>para 2</em></div>
       </div>
 
       <div class="item">
+        <figure class="thumb foto"><img src="assets/fotos/so-a-feijoada.jpg" alt="Panela de feijoada sem os acompanhamentos" onerror="this.remove()"><figcaption>Panela</figcaption></figure>
         <div class="nome-item">
           <strong>Só a feijoada</strong>
-          <small>Sem acompanhamentos, para quem já tem o arroz em casa.</small>
+          <small>Só a panela, sem os acompanhamentos. Boa pra quem já tem o arroz em casa.</small>
         </div>
         <div class="preco">R$ 65</div>
       </div>
@@ -194,10 +237,10 @@
       <div class="adicionais">
         <h4>Porções avulsas</h4>
         <ul>
-          <li>Arroz <span>R$ 10</span></li>
-          <li>Couve <span>R$ 10</span></li>
-          <li>Bisteca <span>R$ 7</span></li>
-          <li>Vinagrete <span>R$ 6</span></li>
+          <li><span class="minifoto foto"><img src="assets/fotos/arroz.jpg" alt="Arroz branco" onerror="this.remove()"></span>Arroz <span>R$ 10</span></li>
+          <li><span class="minifoto foto"><img src="assets/fotos/couve.jpg" alt="Couve com bacon" onerror="this.remove()"></span>Couve <span>R$ 10</span></li>
+          <li><span class="minifoto foto"><img src="assets/fotos/bisteca.jpg" alt="Bisteca de porco frita" onerror="this.remove()"></span>Bisteca <span>R$ 7</span></li>
+          <li><span class="minifoto foto"><img src="assets/fotos/vinagrete.jpg" alt="Vinagrete" onerror="this.remove()"></span>Vinagrete <span>R$ 6</span></li>
         </ul>
       </div>
     </div>
@@ -207,23 +250,38 @@
 <section id="como" style="padding-top:0">
   <div class="wrap">
     <h2>Como <em>pedir</em></h2>
-    <p class="lead">Sem aplicativo e sem taxa de plataforma: é no WhatsApp, direto com a gente.</p>
+    <p class="lead">Não tem aplicativo nem taxa de plataforma. É no WhatsApp, direto com a gente.</p>
     <div class="passos">
       <div class="passo">
         <div class="n">1</div>
         <h3>Chama no WhatsApp</h3>
-        <p>Manda mensagem no (41) 99138-6002 até a sexta ou no sábado de manhã, dizendo quantas porções você quer.</p>
+        <p>Chama no (41) 99138-6002 até a sexta, ou no sábado de manhã, e diz quantas porções você quer.</p>
       </div>
       <div class="passo">
         <div class="n">2</div>
         <h3>Retirada ou Uber Flash</h3>
-        <p>Retire na Paulo de Frontin, 70, ou receba por Uber Flash — o valor da corrida fica por sua conta. Combine no WhatsApp.</p>
+        <p>Retire aqui na Paulo de Frontin, 70, ou receba por Uber Flash. A corrida do Uber fica por sua conta. Combine tudo no WhatsApp.</p>
       </div>
       <div class="passo">
         <div class="n">3</div>
         <h3>Sábado, 11h às 14h</h3>
-        <p>É o único dia. Depois das 14h a gente fecha a panela — não tem segunda-feira.</p>
+        <p>É o único dia. Depois das 14h a panela fecha. Não tem segunda-feira.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <h2>A casa <em>por dentro</em></h2>
+    <p class="lead">Panela no fogo, prato montado e o balcão da Paulo de Frontin.</p>
+    <div class="galeria">
+      <figure class="foto"><img src="assets/fotos/panela-aberta.jpg" alt="Panela de feijoada aberta" onerror="this.remove()"><figcaption>Panela aberta</figcaption></figure>
+      <figure class="foto"><img src="assets/fotos/prato-montado.jpg" alt="Prato de feijoada montado" onerror="this.remove()"><figcaption>Prato montado</figcaption></figure>
+      <figure class="foto"><img src="assets/fotos/bisteca.jpg" alt="Bisteca de porco frita" onerror="this.remove()"><figcaption>A bisteca</figcaption></figure>
+      <figure class="foto"><img src="assets/fotos/couve.jpg" alt="Couve com bacon" onerror="this.remove()"><figcaption>Couve com bacon</figcaption></figure>
+      <figure class="foto"><img src="assets/fotos/retirada.jpg" alt="Retirada da feijoada no balcão" onerror="this.remove()"><figcaption>Retirada no balcão</figcaption></figure>
+      <figure class="foto"><img src="assets/fotos/fachada.jpg" alt="Fachada da casa na Rua Paulo de Frontin, 70" onerror="this.remove()"><figcaption>A casa</figcaption></figure>
     </div>
   </div>
 </section>
@@ -244,9 +302,9 @@
       </div>
       <div class="card">
         <h3 style="font-family:'Anton',sans-serif;font-size:24px;margin:0 0 10px">Entrega e retirada</h3>
-        <p style="font-size:15.5px;margin:0 0 12px">Retire no local ou receba por Uber Flash, com o valor da corrida por sua conta. Para entrega, combine o endereço no WhatsApp.</p>
-        <p style="font-size:15.5px;margin:0 0 12px">Aceitamos <b>Pix</b>, <b>cartão de crédito</b> e <b>débito</b>.</p>
-        <p style="font-size:15.5px;margin:0">A porção completa serve 2 pessoas com folga. Para grupo maior, peça mais de uma ou combine no WhatsApp.</p>
+        <p style="font-size:15.5px;margin:0 0 12px">Retire aqui ou receba por Uber Flash. A corrida do Uber fica por sua conta, então combine o endereço no WhatsApp.</p>
+        <p style="font-size:15.5px;margin:0 0 12px">Dá para pagar no <b>Pix</b>, no <b>crédito</b> ou no <b>débito</b>.</p>
+        <p style="font-size:15.5px;margin:0">A porção completa serve 2 pessoas com folga. Se a turma for maior, peça mais de uma ou combine no WhatsApp.</p>
         <p style="margin:18px 0 0"><a class="btn btn-ghost" style="width:100%;border-color:var(--preto)" href="https://www.google.com/maps/search/?api=1&query=Feijoada+da+Re,+R.+Paulo+de+Frontin,+70,+Cajuru,+Curitiba" target="_blank" rel="noopener">Abrir no mapa</a></p>
       </div>
     </div>
@@ -256,10 +314,10 @@
 <section class="cartaz">
   <div class="wrap">
     <div class="grid">
-      <img src="assets/cartaz.jpg" alt="Cartaz da Feijoada da Rê, com os telefones 3532-4020 e 99138-6002 e o endereço Paulo de Frontin, 70 - Cajuru">
+      <img src="assets/cartaz.jpg" alt="Cartaz da Feijoada da Rê, com os telefones 3532-4020 e 99138-6002 e o endereço Paulo de Frontin, 70, Cajuru">
       <div class="txt">
         <h2>É só no sábado</h2>
-        <p>Faça a sua encomenda durante a semana e garanta a porção. No sábado a gente abre às 11h e fecha às 14h.</p>
+        <p>Encomenda durante a semana e a sua porção fica garantida. No sábado a gente abre às 11h e fecha às 14h.</p>
         <p style="margin-top:18px"><a class="btn btn-zap" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20encomendar%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a></p>
       </div>
     </div>
@@ -270,16 +328,16 @@
   <div class="wrap">
     <div class="mapa">
       <h2>Como chegar</h2>
-      <p>Rua Paulo de Frontin, 70 — Cajuru, Curitiba/PR · Sábado, das 11h às 14h.</p>
-      <iframe src="https://www.google.com/maps?q=Feijoada%20da%20R%C3%AA%2C%20Rua%20Paulo%20de%20Frontin%2C%2070%2C%20Cajuru%2C%20Curitiba%2C%20PR&z=16&output=embed" title="Mapa da Feijoada da Rê — Rua Paulo de Frontin, 70, Cajuru, Curitiba" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <p>Rua Paulo de Frontin, 70, Cajuru, Curitiba/PR. Sábado, das 11h às 14h.</p>
+      <iframe src="https://www.google.com/maps?q=Feijoada%20da%20R%C3%AA%2C%20Rua%20Paulo%20de%20Frontin%2C%2070%2C%20Cajuru%2C%20Curitiba%2C%20PR&z=16&output=embed" title="Mapa da Feijoada da Rê, Rua Paulo de Frontin, 70, Cajuru, Curitiba" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       <p style="margin:0"><a class="btn btn-zap" style="width:100%;max-width:340px" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Paulo%20de%20Frontin%2C%2070%2C%20Cajuru%2C%20Curitiba%2C%20PR" target="_blank" rel="noopener">Como chegar</a></p>
     </div>
     <div class="linha">
       <a href="https://wa.me/5541991386002">WhatsApp (41) 99138-6002</a>
       <a href="tel:+554135324020">Fone (41) 3532-4020</a>
-      <a href="#onde">Paulo de Frontin, 70 — Cajuru</a>
+      <a href="#onde">Paulo de Frontin, 70, Cajuru</a>
     </div>
-    <div class="cred">Feijoada da Rê · Curitiba/PR<br>Sábados, das 11h às 14h · Pronta entrega e retirada</div>
+    <div class="cred">Feijoada da Rê · Curitiba/PR<br>Sábados, das 11h às 14h · Retirada no local e entrega por Uber Flash</div>
   </div>
 </footer>
 
@@ -293,7 +351,7 @@
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Feijoada da Rê",
-  "description": "Feijoada completa feita aos sábados, servindo 2 pessoas com folga, com retirada no Cajuru e entrega por Uber Flash em Curitiba.",
+  "description": "Feijoada de panela feita aos sábados, servindo 2 pessoas com folga, com retirada no Cajuru e entrega por Uber Flash em Curitiba.",
   "servesCuisine": ["Brasileira", "Feijoada"],
   "priceRange": "R$ 6–90",
   "paymentAccepted": "Pix, Cartão de crédito, Cartão de débito",
@@ -330,6 +388,51 @@
     }]
   }
 }
+</script>
+
+<script>
+(function(){
+  var trilho = document.querySelector('.trilho');
+  if (!trilho) return;
+  var slides = [].slice.call(trilho.children);
+  var caixa = document.querySelector('.pontos');
+  var controles = document.querySelectorAll('.carrosel .seta');
+
+  slides.forEach(function(s, i){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'ponto-b' + (i ? '' : ' ativo');
+    b.setAttribute('aria-label', 'Ir para a foto ' + (i + 1));
+    b.addEventListener('click', function(){
+      trilho.scrollTo({left: s.offsetLeft - (trilho.clientWidth - s.offsetWidth) / 2, behavior: 'smooth'});
+    });
+    caixa.appendChild(b);
+  });
+  var pontos = [].slice.call(caixa.children);
+
+  function marcar(){
+    var centro = trilho.scrollLeft + trilho.clientWidth / 2, melhor = 0, menor = Infinity;
+    slides.forEach(function(s, i){
+      var d = Math.abs(s.offsetLeft + s.offsetWidth / 2 - centro);
+      if (d < menor) { menor = d; melhor = i; }
+    });
+    pontos.forEach(function(p, i){ p.classList.toggle('ativo', i === melhor); });
+  }
+
+  trilho.addEventListener('scroll', function(){
+    window.clearTimeout(trilho.t);
+    trilho.t = window.setTimeout(marcar, 90);
+  });
+
+  controles.forEach(function(b, i){
+    b.addEventListener('click', function(){
+      var passo = slides[0].offsetWidth + 12;
+      trilho.scrollBy({left: (i ? -1 : 1) * passo, behavior: 'smooth'});
+    });
+  });
+
+  marcar();
+})();
 </script>
 </body>
 </html>
