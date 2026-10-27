@@ -199,6 +199,23 @@
     .mascote{width:140px;height:140px}
     .logo-rodape{width:220px}
   }
+  /* textura do hero para profundidade */
+  .hero{background:var(--amarelo);background-image:repeating-linear-gradient(45deg,rgba(0,0,0,.04) 0 2px,transparent 2px 14px),repeating-linear-gradient(-45deg,rgba(0,0,0,.025) 0 2px,transparent 2px 14px)}
+
+  /* botão flutuante do WhatsApp */
+  .zap-flutuante{position:fixed;bottom:78px;right:16px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--zap);color:#06331b;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.25);text-decoration:none;transition:transform .15s ease}
+  .zap-flutuante:hover{transform:scale(1.08)}
+  .zap-flutuante:active{transform:scale(.95)}
+  @media(min-width:820px){.zap-flutuante{bottom:24px;right:24px;width:60px;height:60px}}
+
+  /* seção EM BREVE */
+  #em-breve{padding:48px 0}
+  #em-breve h2{font-size:clamp(26px,7vw,40px)}
+  #em-breve h2 em{font-style:normal;color:#fff}
+
+  /* mascote com borda sutil para destacar do fundo amarelo */
+  .mascote{filter:drop-shadow(4px 4px 0 var(--preto)) drop-shadow(0 0 2px rgba(0,0,0,.12))}
+
 </style>
 </head>
 <body>
@@ -209,8 +226,8 @@
   <div class="wrap">
     <img class="mascote" src="assets/logo/feijoada-da-re-mascot.png" alt="Mascote da Feijoada da Rê: cozinheiro feijão sorridente com colher, ao lado da panela" width="120" height="120">
     <span class="kicker">Retirada no local ou Uber Flash</span>
-    <h1>Feijoada<span class="da">da</span><span class="nome">Rê</span></h1>
-    <p class="sub">Feijoada de panela que sai do fogo todo sábado, das 11h às 14h, no Cajuru. A porção de <b>R$ 90</b> serve 2 pessoas com folga.</p>
+    <h1>Feijoada<span class="da">da</span><span class="nome">RÊ</span></h1>
+    <p class="sub">Feijoada de panela que sai do fogo todo sábado, das 11h às 14h, no Cajuru. A porção de <b>R$ 90</b> serve 2 pessoas com folga. Tem a opção completa e a light.</p>
     <div class="acoes">
       <a class="btn btn-zap" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20pedir%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1l2 1c.2.1.4.2.5.3.1.2.1.7-.1 1.4Z"/></svg>
@@ -247,6 +264,17 @@
     </ul>
   </div>
 </div>
+
+<section id="mapa" class="revelar" style="padding-top:0">
+  <div class="wrap">
+    <h2>Como <em>chegar</em></h2>
+    <p class="lead">Rua Paulo de Frontin, 70, Cajuru, Curitiba/PR. Próximo ao terminal das Vilas Oficinas. Sábado, das 11h às 14h.</p>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Feijoada%20da%20R%C3%AA%2C%20Rua%20Paulo%20de%20Frontin%2C%2070%2C%20Cajuru%2C%20Curitiba%2C%20PR&z=16&output=embed" title="Mapa da Feijoada da Rê, Rua Paulo de Frontin, 70, Cajuru, Curitiba" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <p style="margin:14px 0 0"><a class="btn btn-zap" style="width:100%;max-width:340px" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Paulo%20de%20Frontin%2C%2070%2C%20Cajuru%2C%20Curitiba%2C%20PR" target="_blank" rel="noopener">Como chegar</a></p>
+    </div>
+  </div>
+</section>
 
 <section id="cardapio" class="revelar">
   <div class="wrap">
@@ -288,30 +316,6 @@
   </div>
 </section>
 
-<section id="como" style="padding-top:0" class="revelar">
-  <div class="wrap">
-    <h2>Como <em>pedir</em></h2>
-    <p class="lead">Não tem aplicativo nem taxa de plataforma. É no WhatsApp, direto com a gente.</p>
-    <div class="passos">
-      <div class="passo">
-        <div class="n">1</div>
-        <h3>Chama no WhatsApp</h3>
-        <p>Chama no (41) 99138-6002 até a sexta, ou no sábado de manhã, e diz quantas porções você quer.</p>
-      </div>
-      <div class="passo">
-        <div class="n">2</div>
-        <h3>Retirada ou Uber Flash</h3>
-        <p>Retire aqui na Paulo de Frontin, 70, ou receba por Uber Flash. A corrida do Uber fica por sua conta. Combine tudo no WhatsApp.</p>
-      </div>
-      <div class="passo">
-        <div class="n">3</div>
-        <h3>Sábado, 11h às 14h</h3>
-        <p>É o único dia. Depois das 14h a panela fecha. Não tem segunda-feira.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="galeria" class="revelar">
   <div class="wrap">
     <h2>A casa <em>por dentro</em></h2>
@@ -334,7 +338,7 @@
       <div class="card">
         <span class="aberto"><span class="ponto"></span> Aberto no sábado, 11h às 14h</span>
         <dl>
-          <dt>Endereço</dt><dd>Rua Paulo de Frontin, 70<br>Cajuru · Curitiba/PR · 82940-070</dd>
+          <dt>Endereço</dt><dd>Rua Paulo de Frontin, 70<br>Cajuru · Curitiba/PR · 82940-070<br><small style="color:#666;font-weight:500">Próximo ao terminal das Vilas Oficinas</small></dd>
           <dt>Horário</dt><dd>Sábado, 11h às 14h<br><small style="color:#666;font-weight:500">Fechado nos outros dias</small></dd>
           <dt>WhatsApp</dt><dd><a href="https://wa.me/5541991386002">(41) 99138-6002</a></dd>
           <dt>Telefone</dt><dd><a href="tel:+554135324020">(41) 3532-4020</a></dd>
@@ -352,34 +356,24 @@
   </div>
 </section>
 
-<section class="cartaz" class="revelar">
-  <div class="wrap">
-    <div class="grid">
-      <img src="assets/cartaz.jpg" alt="Cartaz da Feijoada da Rê, com os telefones 3532-4020 e 99138-6002 e o endereço Paulo de Frontin, 70, Cajuru">
-      <div class="txt">
-        <h2>É só no sábado</h2>
-        <p>Encomenda durante a semana e a sua porção fica garantida. No sábado a gente abre às 11h e fecha às 14h.</p>
-        <p style="margin-top:18px"><a class="btn btn-zap" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20encomendar%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a></p>
-      </div>
-    </div>
+<section id="em-breve" class="revelar" style="background:var(--preto);color:#eee">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker" style="background:var(--amarelo);color:var(--preto)">Em breve</span>
+    <h2 style="color:var(--amarelo);margin:18px 0 10px">Cardápio <em style="color:#fff">digital</em></h2>
+    <p style="color:#c9c9c9;max-width:520px;margin:0 auto 18px">Pedido para retirada local com antecedência, direto pelo site. Será nossa próxima implementação.</p>
+    <a class="btn btn-zap" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20card%C3%A1pio%20digital." target="_blank" rel="noopener">Quero ser avisado</a>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <img class="logo-rodape" src="assets/logo/feijoada-da-re-horizontal.png" alt="Feijoada da Rê" width="200" height="90">
-    <div class="mapa">
-      <h2>Como chegar</h2>
-      <p>Rua Paulo de Frontin, 70, Cajuru, Curitiba/PR. Sábado, das 11h às 14h.</p>
-      <iframe src="https://www.google.com/maps?q=Feijoada%20da%20R%C3%AA%2C%20Rua%20Paulo%20de%20Frontin%2C%2070%2C%20Cajuru%2C%20Curitiba%2C%20PR&z=16&output=embed" title="Mapa da Feijoada da Rê, Rua Paulo de Frontin, 70, Cajuru, Curitiba" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-      <p style="margin:0"><a class="btn btn-zap" style="width:100%;max-width:340px" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Paulo%20de%20Frontin%2C%2070%2C%20Cajuru%2C%20Curitiba%2C%20PR" target="_blank" rel="noopener">Como chegar</a></p>
-    </div>
     <div class="linha">
       <a href="https://wa.me/5541991386002">WhatsApp (41) 99138-6002</a>
       <a href="tel:+554135324020">Fone (41) 3532-4020</a>
       <a href="#onde">Paulo de Frontin, 70, Cajuru</a>
     </div>
-    <div class="cred">Feijoada da Rê · Curitiba/PR<br>Sábados, das 11h às 14h · Retirada no local e entrega por Uber Flash</div>
+    <div class="cred">Feijoada da Rê · Curitiba/PR<br>Paulo de Frontin, 70, Cajuru (próximo ao terminal das Vilas Oficinas)<br>Sábados, das 11h às 14h · Retirada no local e entrega por Uber Flash</div>
   </div>
 </footer>
 
@@ -508,5 +502,8 @@
   }
 })();
 </script>
+<a class="zap-flutuante" href="https://wa.me/5541991386002?text=Ol%C3%A1!%20Quero%20pedir%20a%20feijoada%20de%20s%C3%A1bado." target="_blank" rel="noopener" aria-label="Pedir no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1l2 1c.2.1.4.2.5.3.1.2.1.7-.1 1.4Z"/></svg>
+</a>
 </body>
 </html>
