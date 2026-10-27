@@ -12,6 +12,14 @@
 <meta property="og:url" content="https://feijoadadare.com.br/">
 <link rel="canonical" href="https://feijoadadare.com.br/">
 <meta name="theme-color" content="#FFD400">
+<link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/logo/favicon-256.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/logo/favicon-256.png">
+<meta property="og:image" content="https://feijoadadare.com.br/assets/logo/feijoada-da-re-square.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Logo da Feijoada da Rê: feijoada de panela no Cajuru, Curitiba">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -185,6 +193,12 @@
     .item .thumb{width:76px;height:76px}
     .galeria{grid-template-columns:repeat(3,1fr);gap:16px}
   }
+  .mascote{width:110px;height:110px;object-fit:contain;margin:0 auto 18px;display:block;filter:drop-shadow(4px 4px 0 var(--preto))}
+  .logo-rodape{width:180px;height:auto;margin:0 auto 26px;display:block;filter:drop-shadow(3px 3px 0 var(--amarelo))}
+  @media(min-width:820px){
+    .mascote{width:140px;height:140px}
+    .logo-rodape{width:220px}
+  }
 </style>
 </head>
 <body>
@@ -193,6 +207,7 @@
 
 <header class="hero">
   <div class="wrap">
+    <img class="mascote" src="assets/logo/feijoada-da-re-mascot.png" alt="Mascote da Feijoada da Rê: cozinheiro feijão sorridente com colher, ao lado da panela" width="120" height="120">
     <span class="kicker">Retirada no local ou Uber Flash</span>
     <h1>Feijoada<span class="da">da</span><span class="nome">Rê</span></h1>
     <p class="sub">Feijoada de panela que sai do fogo todo sábado, das 11h às 14h, no Cajuru. A porção de <b>R$ 90</b> serve 2 pessoas com folga.</p>
@@ -352,6 +367,7 @@
 
 <footer>
   <div class="wrap">
+    <img class="logo-rodape" src="assets/logo/feijoada-da-re-horizontal.png" alt="Feijoada da Rê" width="200" height="90">
     <div class="mapa">
       <h2>Como chegar</h2>
       <p>Rua Paulo de Frontin, 70, Cajuru, Curitiba/PR. Sábado, das 11h às 14h.</p>

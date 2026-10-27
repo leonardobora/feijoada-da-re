@@ -1,0 +1,70 @@
+{
+  "feijoada-da-re-square": {
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      110,
+      36,
+      913,
+      989
+    ]
+  },
+  "feijoada-da-re-horizontal": {
+    "size": [
+      1600,
+      720
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      92,
+      54,
+      1537,
+      651
+    ]
+  },
+  "feijoada-da-re-icon": {
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      49,
+      108,
+      981,
+      916
+    ]
+  },
+  "feijoada-da-re-mascot": {
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bounds": [
+      92,
+      90,
+      933,
+      933
+    ]
+  }
+}
